@@ -1,7 +1,6 @@
 import express from 'express';
 import pets from './petList.js';
 
-
 const app = express();
 const PORT = 8000;
 
@@ -9,20 +8,21 @@ app.get('/pets', (req, res) => res.json(pets));
 
 app.get('/', (req, res) => {
     res.send(
-    ` <h1>Adopt a Pet!</h1>
+    ` <h1 className='text-3xl text-blue-500 font-semibold' >Adopt a Pet!</h1>
     <p>'Browse through the links below to find your new furry friend: '</p>
     <ul>
         <li>
-        <a href='/animals/dogs'>Dogs</a>
+        <a href='/animals/rabbits'>Rabbits</a>
         </li>
 
         <li>
         <a href='/animals/cats'>Cats</a>
         </li>
-       
+
         <li>
-        <a href='/animals/rabbits'>Rabbits</a>
+        <a href='/animals/dogs'>Dogs</a>
         </li>
+
     </ul>
     `);
 });
